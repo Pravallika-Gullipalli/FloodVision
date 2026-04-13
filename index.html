@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloodVision</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* SLIDES */
+        .slide {
+            display: none;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #0c1a2e, #0ea5e9);
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 70px;
+        }
+
+        .hero span {
+            color: #38bdf8;
+        }
+
+        /* BUTTONS */
+        .btn {
+            margin-top: 20px;
+            padding: 14px 35px;
+            border-radius: 12px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            background: linear-gradient(135deg, #06b6d4, #3b82f6);
+            color: white;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* SECTION */
+        .section {
+            background: linear-gradient(to bottom, #f0f9ff, #e0f2fe);
+            color: #111;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 36px;
+        }
+
+        /* CARDS */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 18px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .emoji {
+            font-size: 24px;
+        }
+
+        .card-content h4 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .card-content p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* COLORS */
+        .before {
+            border-left: 5px solid #10b981;
+        }
+
+        .during {
+            border-left: 5px solid #f59e0b;
+        }
+
+        .after {
+            border-left: 5px solid #0ea5e9;
+        }
+
+        /* NAV */
+        .nav {
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <div class="slide active hero">
+        <h1>Flood<span>Vision</span></h1>
+        <p>Detect early. Act instantly. Recover completely.</p>
+        <button class="btn" onclick="nextSlide()">Explore Guide →</button>
+    </div>
+
+    <!-- BEFORE -->
+    <div class="slide section">
+        <h2>🛡️ Before the Flood</h2>
+        <div class="cards">
+
+            <div class="card before">
+                <span class="emoji">🎒</span>
+                <div class="card-content">
+                    <h4>Emergency Kit</h4>
+                    <p>Prepare an emergency kit with water, food, medicines, and important documents.</p>
+                </div>
+            </div>
+
+            <div class="card before">
+                <span class="emoji">🗺️</span>
+                <div class="card-content">
+                    <h4>Evacuation Plan</h4>
+                    <p>Identify safe routes and practice them regularly with your family.</p>
+                </div>
+            </div>
+
+            <div class="card before">
+                <span class="emoji">📻</span>
+                <div class="card-content">
+                    <h4>Stay Updated</h4>
+                    <p>Keep track of weather updates and flood warnings through reliable sources.</p>
+                </div>
+            </div>
+
+            <div class="card before">
+                <span class="emoji">📄</span>
+                <div class="card-content">
+                    <h4>Protect Documents</h4>
+                    <p>Store important documents in waterproof covers to protect them.</p>
+                </div>
+            </div>
+
+            <div class="card before">
+                <span class="emoji">👨‍👩‍👧</span>
+                <div class="card-content">
+                    <h4>Family Plan</h4>
+                    <p>Create a family emergency plan and assign responsibilities.</p>
+                </div>
+            </div>
+
+            <div class="card before">
+                <span class="emoji">🔋</span>
+                <div class="card-content">
+                    <h4>Charge Devices</h4>
+                    <p>Charge devices and keep power banks ready for emergencies.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="nav">
+            <button class="btn" onclick="prevSlide()">← Back</button>
+            <button class="btn" onclick="nextSlide()">Next →</button>
+        </div>
+    </div>
+
+    <!-- DURING -->
+    <div class="slide section">
+        <h2>⚠️ During the Flood</h2>
+        <div class="cards">
+
+            <div class="card during">
+                <span class="emoji">⛰️</span>
+                <div class="card-content">
+                    <h4>Move to Safety</h4>
+                    <p>Move immediately to higher ground without waiting.</p>
+                </div>
+            </div>
+
+            <div class="card during">
+                <span class="emoji">🚫</span>
+                <div class="card-content">
+                    <h4>Avoid Water</h4>
+                    <p>Avoid walking or driving through floodwater as it is dangerous.</p>
+                </div>
+            </div>
+
+            <div class="card during">
+                <span class="emoji">⚡</span>
+                <div class="card-content">
+                    <h4>Turn Off Power</h4>
+                    <p>Switch off electricity if it is safe to avoid hazards.</p>
+                </div>
+            </div>
+
+            <div class="card during">
+                <span class="emoji">🏠</span>
+                <div class="card-content">
+                    <h4>Stay Safe Indoors</h4>
+                    <p>Stay indoors in a secure place and remain calm.</p>
+                </div>
+            </div>
+
+            <div class="card during">
+                <span class="emoji">📡</span>
+                <div class="card-content">
+                    <h4>Follow Alerts</h4>
+                    <p>Follow official alerts and emergency instructions carefully.</p>
+                </div>
+            </div>
+
+            <div class="card during">
+                <span class="emoji">📱</span>
+                <div class="card-content">
+                    <h4>Stay Connected</h4>
+                    <p>Keep your phone charged and use it wisely.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="nav">
+            <button class="btn" onclick="prevSlide()">← Back</button>
+            <button class="btn" onclick="nextSlide()">Next →</button>
+        </div>
+    </div>
+
+    <!-- AFTER -->
+    <div class="slide section">
+        <h2>💙 After the Flood</h2>
+        <div class="cards">
+
+            <div class="card after">
+                <span class="emoji">💧</span>
+                <div class="card-content">
+                    <h4>Safe Water</h4>
+                    <p>Do not use water until authorities declare it safe.</p>
+                </div>
+            </div>
+
+            <div class="card after">
+                <span class="emoji">🏚️</span>
+                <div class="card-content">
+                    <h4>Check Home</h4>
+                    <p>Inspect your home carefully for damage before entering.</p>
+                </div>
+            </div>
+
+            <div class="card after">
+                <span class="emoji">📸</span>
+                <div class="card-content">
+                    <h4>Document Damage</h4>
+                    <p>Take photos for insurance and records.</p>
+                </div>
+            </div>
+
+            <div class="card after">
+                <span class="emoji">🧼</span>
+                <div class="card-content">
+                    <h4>Clean Area</h4>
+                    <p>Clean and disinfect your home properly.</p>
+                </div>
+            </div>
+
+            <div class="card after">
+                <span class="emoji">🤝</span>
+                <div class="card-content">
+                    <h4>Help Others</h4>
+                    <p>Support neighbors and your community.</p>
+                </div>
+            </div>
+
+            <div class="card after">
+                <span class="emoji">🏥</span>
+                <div class="card-content">
+                    <h4>Medical Care</h4>
+                    <p>Seek medical help if needed.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="nav">
+            <button class="btn" onclick="prevSlide()">← Back</button>
+            <button class="btn" onclick="nextSlide()">Next →</button>
+        </div>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="slide section">
+        <h2>❤️ Stay Safe</h2>
+        <p style="text-align:center;">Be prepared, stay alert, and support others.</p>
+        <div class="nav">
+            <button class="btn" onclick="goToSlide(0)">🏠 Home</button>
+        </div>
+    </div>
+
+    <script>
+        let current = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function showSlide(index) {
+            slides.forEach(s => s.classList.remove("active"));
+            slides[index].classList.add("active");
+        }
+
+        function nextSlide() {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+        }
+
+        function prevSlide() {
+            current = (current - 1 + slides.length) % slides.length;
+            showSlide(current);
+        }
+
+        function goToSlide(n) {
+            current = n;
+            showSlide(current);
+        }
+    </script>
+
+</body>
+
+</html>
